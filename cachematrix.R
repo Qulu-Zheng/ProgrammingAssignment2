@@ -10,12 +10,12 @@ a <- NULL
         a <<- NULL
      }
      get <- function() x
-    setinverse <- function() a <<- solve(x) 
+     setinverse <- function() a <<- solve(x) 
      getinverse <- function() a
      list(set = set,
           get = get,
-         setinverse = setinverse,
-         getinverse = getinverse)
+          setinverse = setinverse,
+          getinverse = getinverse)
 }
 
 
@@ -28,7 +28,7 @@ cacheSolve <- function(x, ...) {
         return(a)
      }
      data <- x$getinverse()
-    a <- solve(data, ...)
+     a <- solve(data, ...)
      x$setinverse(a)
      a## Return a matrix that is the inverse of 'x'
 }
